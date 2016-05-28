@@ -1,4 +1,6 @@
-//
+//insertion sort
+//nonadaptive insertion sort
+
 #include <stdio.h>
 #include <stdlib.h>
 typedef int Item;
@@ -10,7 +12,7 @@ typedef int Item;
 void sort(Item a[], int l, int r){
 	int i, j;
 	for (i = l+1; i <= r; i++){
-		for (j = i; j > 1; j--){
+		for (j = i; j > l; j--){
 			compexch(a[j-1], a[j]);
 		}
 	}
